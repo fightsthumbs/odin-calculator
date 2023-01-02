@@ -1,0 +1,99 @@
+body {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+ font-family: Arial, Helvetica, sans-serif;
+}
+
+.calc-body {
+  width: 700px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-areas: 
+  "display display display display"
+  "misc misc misc op"
+  "seven eight nine op"
+  "four five six op"  
+  "one two three op"
+  "zero zero point op"
+  ;
+  gap: 5px;
+}
+
+
+.calc-button {
+  min-width:75px;
+  height:75px;
+  font-weight: bold;
+  font-size: 30px;
+  border-radius: 25px;
+box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.349);
+  cursor: pointer;
+}
+
+.calc-num {
+  background-color: #CDA2AB;
+}
+ .calc-op {
+  background-color: #54C6EB;
+} 
+.calc-misc {
+  background-color: #8A89C0;
+}
+ 
+
+
+.calc-display {
+  grid-area: display;
+  padding: 25px 100px;
+  background-color: rgb(73, 70, 70);
+  color: rgb(117, 255, 4);
+  font-weight: bolder;
+  font-size: 60px;
+  text-align: right;
+  min-height: 100px;
+  border: 2px solid coral;
+  border-radius: 25px;
+
+}
+
+.calc-seven {
+  grid-area: seven;
+}
+.calc-eight {
+  grid-area: eight;
+}
+.calc-nine {
+  grid-area: nine;
+}
+
+.calc-four {
+  grid-area: four;
+}
+.calc-five {
+  grid-area: five;
+}
+.calc-six {
+  grid-area: six;
+}
+
+.calc-one {
+  grid-area: one;
+}
+.calc-two {
+  grid-area: two;
+}
+.calc-three {
+  grid-area: three;
+}
+
+.calc-zero {
+  grid-area: zero;
+}
+
+
+
+
+
+
+
