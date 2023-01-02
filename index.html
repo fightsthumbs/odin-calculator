@@ -8,9 +8,15 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Calculadora</h1>
-    <p>Esta calculadora es un ejercicio propuesto por la ruta de aprendizaje del Projecto Odin.
-        Esta implementación fue realizada por Benjamín Álvarez Rodríguez <a href="">(@fightsthumbs)</a> 
+    <header>
+
+        <div class="head-container">
+            <h1 class="calc-title">Calculadora</h1>
+            <p class="calc-description">Esta calculadora es un ejercicio propuesto por la ruta de aprendizaje del <a href="https://www.theodinproject.com/">Projecto Odin</a>.
+                <br>Esta implementación fue realizada por Benjamín Álvarez Rodríguez <a href="https://github.com/fightsthumbs">(@fightsthumbs)</a> 
+        </div>
+
+    </header>
     </p>
     <div class="calc-body">
        <p class="calc-display" id="display-screen"></p>
@@ -28,6 +34,7 @@
 
 
         <button class="calc-misc calc-button calc-ac">AC</button>
+        <button class="calc-misc calc-button calc-back">◀</button>
         <button class="calc-misc calc-button">+/-</button>
 
         <button class="calc-op calc-button">+</button>
@@ -35,7 +42,7 @@
         <button class="calc-op calc-button">*</button>
         <button class="calc-op calc-button">/</button>
         <button class="calc-misc calc-button" id="calc-result">=</button>
-        <button class="calc-misc calc-button">.</button>
+        <button class="calc-num calc-button calc-point">.</button>
       
 
     </div>

@@ -38,6 +38,7 @@ const numButton = document.getElementsByClassName("calc-num");
 const opButton = document.getElementsByClassName("calc-op");
 const display = document.getElementById("display-screen")
 const acButton = document.getElementsByClassName("calc-ac")[0];
+const backButton = document.getElementsByClassName("calc-back")[0];
 const resultButton = document.getElementById("calc-result");
 // numButton[0].addEventListener("click", ()=> {
 //   displayValue+=numButton[0].textContent;
@@ -47,6 +48,7 @@ const resultButton = document.getElementById("calc-result");
 
 function printDisplay() {
   display.textContent=displayValue;
+
 }
 
 for (let i of numButton) {
@@ -59,7 +61,8 @@ for (let i of numButton) {
 
 for (let i of opButton) {
   i.addEventListener("click", ()=>{
-    if (displayValue.includes("/") || displayValue.includes("*") || displayValue.includes("-") || displayValue.includes("+")) {
+    let myRegex =  /[-+*\/]/;
+    if (myRegex.test(displayValue)) {
       console.log("operación debe realizarse");
       operate(displayValue);
       //incluir función que realiza la operación ya terminada;
@@ -113,6 +116,18 @@ resultButton.addEventListener("click", ()=> {
   // }
 
 })
+
+
+backButton.addEventListener("click", ()=>{
+  if (displayValue == "") {
+    console.log("nada que borrar");
+    return null;
+  } else {
+    displayValue = displayValue.slice(0,-1);
+    printDisplay();
+  }
+})
+
 
 /* 
 for ()
